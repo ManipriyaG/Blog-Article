@@ -29,8 +29,15 @@ const articleSchema = new mongoose.Schema({
     sanitizedHtml:{
         type: String,
         required: true
+    },
+    author:{
+        type: String
+    },
+    noOfViews:{
+        type: Number,
+        default: 0
     }
-})
+});
 articleSchema.pre('validate', function(next) {
     if (this.title) {
         this.slug = slugify(this.title, { lower: true,

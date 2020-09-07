@@ -14,12 +14,16 @@
 <body>
     <div class = "container">
         <h1 class="mb-4">New Article</h1>
-
-
-        <form action="/articles" method="POST">
-            <%- include('_form_fields') %>
+        <form action="index" method="POST">
+            <%- include('_form_fields') %>            
+            <a href="nindex" class="btn btn-secondary">
+                Cancel
+            </a>
+            
+            <button type="Submit" class="btn btn-primary">
+                Save
+            </button>
         </form>
-        
     </div>
 </body>
 </html>
